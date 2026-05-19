@@ -39,8 +39,13 @@ public class House extends FixedAsset{
     public void setBedrooms(int bedrooms) {
         this.bedrooms = bedrooms;
     }
-
-
+// house loses $1000 in value for every year it has been around
+    @Override
+    public double getValue() {
+        int age = 2026 - yearBuilt;
+        double depreciation = age * 1000;
+        return getMarketValue() - depreciation;
+    }
 
 
 
