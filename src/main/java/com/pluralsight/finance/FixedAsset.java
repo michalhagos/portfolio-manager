@@ -12,20 +12,27 @@ public abstract class FixedAsset implements Valuable {
         this.marketValue = marketValue;
     }
 
+    // returns the name of the asset
     public String getName() {
         return name;
     }
 
+    // updates the name of the asset
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // returns the market value of the asset
     public double getMarketValue() {
         return marketValue;
     }
 
-    // Used set method to update the value when market prices change
+    // updates the market value of the asset
     public void setMarketValue(double marketValue) {
         this.marketValue = marketValue;
     }
 
-    // returns the market Value it is overriding the method
+    // returns the market value as the value of this asset. it is overriding the method
     @Override
     public double getValue() {
         return marketValue;
