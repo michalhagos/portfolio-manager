@@ -50,5 +50,11 @@ public class CreditCard implements Valuable{
         System.out.println("Charged $" + amount + " to " + name + "'s credit card");
     }
 
+    // reduces what you owe by making a payment
+    public void pay(double amount) {
+        this.balance -= amount;
+        System.out.println("Paid $" + amount + " on " + name + "'s credit card");
+    }
+
 
 }
