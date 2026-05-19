@@ -16,7 +16,7 @@ public class CreditCard implements Valuable{
         this.balance = balance;
     }
 
-    // returns the name of the card holder
+    // returns the name of the card-holder
     public String getName() {
         return name;
     }
@@ -30,7 +30,7 @@ public class CreditCard implements Valuable{
     public double getBalance() {
         return balance;
     }
-    // updates the name of the card holder
+    // updates the name of the card-holder
     public void setName(String name) {
         this.name = name;
     }
@@ -44,7 +44,11 @@ public class CreditCard implements Valuable{
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
+    // adds a charge to what you owe on the card
+    public void charge(double amount) {
+        this.balance += amount;
+        System.out.println("Charged $" + amount + " to " + name + "'s credit card");
+    }
 
 
 }
