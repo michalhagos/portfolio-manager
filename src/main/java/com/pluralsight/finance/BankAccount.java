@@ -1,6 +1,6 @@
 package com.pluralsight.finance;
 
-public class BankAccount {
+public class BankAccount implements Valuable {
 
 
 }
