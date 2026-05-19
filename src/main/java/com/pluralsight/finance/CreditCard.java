@@ -55,6 +55,10 @@ public class CreditCard implements Valuable{
         this.balance -= amount;
         System.out.println("Paid $" + amount + " on " + name + "'s credit card");
     }
-
+    // credit card value is negative balance because it represents debt. it means if you owe $600 your net worth goes down by $600
+    @Override
+    public double getValue() {
+        return -balance;
+    }
 
 }
