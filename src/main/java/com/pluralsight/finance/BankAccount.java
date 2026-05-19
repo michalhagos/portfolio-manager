@@ -51,6 +51,23 @@ public class BankAccount implements Valuable {
         System.out.println("Deposited $" + amount + " into " + name + "'s account");
     }
 
+    // this method removes money from the account
+
+    public void withdraw(double amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+            System.out.println("Withdrew $" + amount + " from " + name + "'s account");
+        } else {
+            System.out.println("Insufficient funds in " + name + "'s account");
+        }
+    }
+
+    // override the get value method implementing Valuable. the value of a bank account is current balance
+
+    @Override
+    public double getValue() {
+        return balance;
+    }
 
 
 }
