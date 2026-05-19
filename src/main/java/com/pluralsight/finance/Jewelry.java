@@ -13,4 +13,12 @@ public class Jewelry extends FixedAsset {
     // Add getKarat getter to Jewelry
     public double getKarat() { return karat; }
 
+    // overriding getValue method with karat formula
+    @Override
+    public double getValue() {
+        return getMarketValue() * (karat / 24);
+    }
+
+
+
 }
