@@ -10,6 +10,12 @@ public class House extends FixedAsset{
     // the number of bedrooms
     private int bedrooms;
 
+    public House(String name, double marketValue, int yearBuilt, int squareFeet, int bedrooms) {
+        super(name, marketValue);
+        this.yearBuilt = yearBuilt;
+        this.squareFeet = squareFeet;
+        this.bedrooms = bedrooms;
+    }
 
 
 
