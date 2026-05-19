@@ -44,6 +44,12 @@ public class BankAccount implements Valuable {
         this.balance = balance;
     }
 
+    // the deposit method adds money to the account balance
+
+    public void deposit(double amount) {
+        this.balance += amount;
+        System.out.println("Deposited $" + amount + " into " + name + "'s account");
+    }
 
 
 
