@@ -10,6 +10,7 @@ public class Jewelry extends FixedAsset {
         super(name, marketValue);
         this.karat = karat;
     }
-
+    // Add getKarat getter to Jewelry
+    public double getKarat() { return karat; }
 
 }
