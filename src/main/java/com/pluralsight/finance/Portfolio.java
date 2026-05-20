@@ -29,7 +29,26 @@ public class Portfolio {
         return totalValue;
     }
 
+    // this method returns the asset with the highest value in the portfolio
+    public Valuable getMostValuable() {
 
+        // starting by assuming the first asset is the most valuable
+        Valuable mostValuable = assets.get(0);
+
+        // go through every asset in the list using for each loop
+        for (Valuable currentAsset : assets) {
+
+            // is this asset worth more than what we have so far?
+            if (currentAsset.getValue() > mostValuable.getValue()) {
+
+                // yes it is so update our answer
+                mostValuable = currentAsset;
+            }
+        }
+
+        // here need to return whatever ended up being the most valuable
+        return mostValuable;
+    }
 
 
 }
