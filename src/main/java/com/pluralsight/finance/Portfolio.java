@@ -50,5 +50,31 @@ public class Portfolio {
         return mostValuable;
     }
 
+    // this returns the asset with the lowest value in the portfolio
+    public Valuable getLeastValuable() {
+
+        // start by assuming the first asset is the least valuable
+        Valuable leastValuable = assets.get(0);
+
+        // go through every asset in the list using for each loop
+        for (Valuable currentAsset : assets) {
+
+            // is this asset worth less than what we have so far?
+            if (currentAsset.getValue() < leastValuable.getValue()) {
+
+                // if yes it is.  so update our answer
+                leastValuable = currentAsset;
+            }
+        }
+
+        // return whatever ended up being the least valuable
+        return leastValuable;
+    }
+
+
+
+
+
+
 
 }
