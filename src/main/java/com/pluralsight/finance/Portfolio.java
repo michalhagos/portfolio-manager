@@ -17,4 +17,19 @@ public class Portfolio {
     public void addAsset(Valuable asset) {
         this.assets.add(asset);
     }
+
+    // returns the total net value of all assets in the portfolio
+// loops through every asset and adds up all the values
+// credit cards will reduce the total because getValue() returns negative for them
+    public double getValue() {
+        double totalValue = 0;
+        for (Valuable asset : assets) {
+            totalValue += asset.getValue();
+        }
+        return totalValue;
+    }
+
+
+
+
 }
